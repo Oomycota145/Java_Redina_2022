@@ -1,16 +1,15 @@
+package KR_10;
+
+import java.util.Scanner;
+
 public class T1_5 {
-    String user;
-    float x;
-    T1_5(String user, float x){
-        this.user = user;
-        this.x = x;
-    }
     public static void main(String[] args){
-    	T1_5 object = new T1_5("Aleksandra", 151.512f);
-        object.display();
+        Scanner sc = new Scanner(System.in);
+        String string = sc.nextLine();
+        string  = string.replaceAll("\\bsmall\\b\\s*", "very small ");
+        string  = string.replaceAll("\\blarge\\b\\s*", "very large ");
+        string = string.trim();
+        System.out.println(string);
     }
 
-    public void display(){
-        System.out.println("The nickname: "+this.user);
-    }
 }
